@@ -1,0 +1,228 @@
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    left: 50%;
+    
+}
+
+#next, #previous {
+   
+    margin: 40px;
+    border-radius: 30%;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    border: 1;
+    background: none;
+}
+#next {
+    left: 90%;
+    top: 30%;
+}
+
+#next:hover, #previous:hover {
+    background-color: rgba(255, 145, 0, 0.726);
+}
+
+#next:active, #previous:active {
+  box-shadow: 0 0 5px 2px rgb(194, 91, 0);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    
+    font-family: "Lucida Console", Courier, monospace;
+  }
+  
+  .bigDaddy {
+    background-image: url('img/back.jpg'); 
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      position: relative;
+  }
+  
+  .item {
+    width: 10%;
+    height: 120px;
+    margin: 5px;
+  }
+  
+  .ditem {
+      box-sizing: border-box;
+      position: relative;
+      width: 45%;
+      height: 100%;
+      display: inline-flex;
+      border-radius: 10px;
+      perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  div.card-front {
+    color: rgb(255, 255, 255);
+    box-shadow: 7px 8px 13px 0 rgba(0,0,0,0.75);
+    border: 1px solid rgba(0,0,0,0.75);
+    border-radius: 20px;
+    background-image: url('img/sand.jpeg');
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  div.card-front:hover, span.card-front:hover {
+    text-shadow: 1px 1px 2px black, 0 0 45px rgb(224, 155, 6);
+    border-radius: 20px;
+    animation-name: borderdiv;
+    animation-duration: 0.5s;
+  }
+  
+  div.card-front:active, span.card-front:active {
+      box-shadow: 0 0 22px 3px rgb(255, 172, 47);
+  }
+  
+  @keyframes borderdiv {
+    from {border-radius: 20px;}
+    to {border-radius: 20px;}
+  }
+  
+  .card-back {
+    box-shadow: 7px 8px 13px 0 rgba(0,0,0,0.75);
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .character-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #2725239d;
+  }
+  
+  .character-modal-content {
+      right: 30%;
+      position: relative;
+      padding: 23px;
+      
+      width: 30%;
+      height: auto;
+      float: right;
+      animation-name: animatetop;
+      animation-duration: 1s;
+      background-color: #2725239d;
+  }
+  
+  @keyframes animatetop {
+    from {bottom: -1200px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  .close {
+    color: rgba(255, 145, 0, 0.726);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .table-bordered {
+      border: 1px solid rgb(255, 172, 47);
+  }
+  
+  table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      border-spacing: 2px;
+  }
+  
+  tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit;
+  }
+  
+  .table td, .table th {
+      padding: .75rem;
+      vertical-align: top;
+      text-align: center;
+      color: white;
+  }
+  tr#name th{
+      border: 1px solid rgb(255, 172, 47);
+  }
+  
+  button:focus {
+    outline-width: 0;
+  }
+  
+  .disabled {
+    pointer-events: none;
+  }
+  
+  .avatar {
+      height: 200px;
+      margin: 21px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  .img.avatar {
+      display:none;
+      width:100%;
+      height: 100%;
+      position: relative;
+  }
+  
