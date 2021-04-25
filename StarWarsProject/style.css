@@ -1,3 +1,11 @@
+@font-face {
+  font-family:"STARWARS";
+  src:url("../fonts/STARWARS.eot?") format("eot"),url("../fonts/STARWARS.woff") format("woff"),url("../fonts/STARWARS.ttf") format("truetype"),url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+
 .page-buttons {
     display: flex;
     justify-content: center;
@@ -15,7 +23,7 @@
    
     margin: 40px;
     border-radius: 30%;
-    font-size: 80px;
+    font-size: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +48,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: 'STARWARS';
   }
   
   .bigDaddy {
@@ -89,16 +96,17 @@ body, html {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
   }
   
   div.card-front {
-    color: rgb(255, 255, 255);
+    color: rgb(224, 220, 6);
     box-shadow: 7px 8px 13px 0 rgba(0,0,0,0.75);
-    border: 1px solid rgba(0,0,0,0.75);
-    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,0.75);
+    border-radius: 50%;
     background-image: url('img/sand.jpeg');
     background-position: center;
     display: flex;
@@ -146,7 +154,7 @@ body, html {
       right: 30%;
       position: relative;
       padding: 23px;
-      
+      letter-spacing: 2px;
       width: 30%;
       height: auto;
       float: right;
@@ -163,13 +171,13 @@ body, html {
   .close {
     color: rgba(255, 145, 0, 0.726);
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
   }
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: rgb(44, 43, 43);
     text-decoration: none;
     cursor: pointer;
   }
